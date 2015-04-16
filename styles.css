@@ -26,9 +26,6 @@ p {
     margin-left: 50px;
 }
 
-
-/*set the tooltip selectors to a.tooltip and then delete the spans?*/
-
 .tooltip {
     color: steelblue;
     display: inline;
@@ -53,6 +50,44 @@ p {
 
 /*this adds an arrow to the tooltip box */
 .tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
+
+/*  the highlight classes have the same function as the tooltip classes but the text is yellow.
+	there must be a way to combine classes of the tooltip text to avoid duplicating code. See CSS Cascade.
+	the highlighted text indicates that I have to check the translation */
+	
+.highlight {
+    color: steelblue;
+    display: inline;
+    position: relative;
+}
+
+.highlight:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: yellow;
+    content: attr(highlight);
+    font-size:large;
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 98;
+    width: 180px;   
+}
+
+/*this adds an arrow to the tooltip box */
+.highlight:hover:before{
     border: solid;
     border-color: #333 transparent;
     border-width: 6px 6px 0 6px;
