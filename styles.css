@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 7, 2015, 5:43:30 PM
+    Author     : Christopher
+*/
+
+body {
+    background-color: wheat;
+    font-family: 'Signika', sans-serif;
+    font-size: 24px;
+}
+
+h1 {
+    margin-left: 50px;
+}
+
+h2{
+   margin-left: 50px; 
+}
+
+p {
+    margin-left: 50px;
+}
+
+/*set the tooltip selectors to a.tooltip and then delete the spans?*/
+
+.tooltip {
+    color: steelblue;
+    display: inline;
+    position: relative;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(0,0,0,.8);
+    border-radius: 5px;
+    bottom: 26px;
+    color: #fff;
+    content: attr(tooltip);
+    font-size:large;
+    left: 20%;
+    padding: 5px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 98;
+    width: 180px;
+     
+}
+
+/*this adds an arrow to the tooltip box */
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 50%;
+    position: absolute;
+    z-index: 99;
+}
