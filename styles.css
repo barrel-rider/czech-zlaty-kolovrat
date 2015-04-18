@@ -62,8 +62,15 @@ p {
 
 /*  the highlight classes have the same function as the tooltip classes but the text is yellow.
 	there must be a way to combine classes of the tooltip text to avoid duplicating code. See CSS Cascade.
-	the highlighted text indicates that I have to check the translation */
+	the highlighted text indicates that I have to check the translation 
+	What should work is a class called .highlight added to .tooltip classes in HTML that specifies color:yellow and overrides the tooltip color #FFF
+	*/
 	
+a.highlight:hover:after{
+color:yellow;
+}
+
+/*	
 .highlight {
     color: steelblue;
     display: inline;
@@ -86,7 +93,11 @@ p {
     width: 180px;   
 }
 
+*/
+
 /*this adds an arrow to the tooltip box */
+
+/*
 .highlight:hover:before{
     border: solid;
     border-color: #333 transparent;
@@ -98,3 +109,4 @@ p {
     z-index: 99;
 }
 
+*/
