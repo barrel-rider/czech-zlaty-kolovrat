@@ -8,6 +8,9 @@ and open the template in the editor.
     Author     : Christopher
 */
 
+
+
+
 body {
     background-color: wheat;
     font-family: 'Signika', sans-serif;
@@ -60,53 +63,14 @@ p {
     z-index: 99;
 }
 
-/*  the highlight classes have the same function as the tooltip classes but the text is yellow.
-	there must be a way to combine classes of the tooltip text to avoid duplicating code. See CSS Cascade.
-	the highlighted text indicates that I have to check the translation 
-	What should work is a class called .highlight added to .tooltip classes in HTML that specifies color:yellow and overrides the tooltip color #FFF
-	*/
-	
+/*  the highlighted text indicates that I have to check the translation
+	the highlight class color assignment takes precedence over the tooltip color assignment because it is a more specific rule, including the "a" element
+	It would also work if it was equally specific, but came as a later rule than the tooltip color assignment
+	This allows highlighting to be turned on and off by adding or deleting the class "highlight" in the HTML file
+*/
+
 a.highlight:hover:after{
 color:yellow;
 }
+	
 
-/*	
-.highlight {
-    color: steelblue;
-    display: inline;
-    position: relative;
-}
-
-.highlight:hover:after{
-    background: #333;
-    background: rgba(0,0,0,.8);
-    border-radius: 5px;
-    bottom: 26px;
-    color: yellow;
-    content: attr(highlight);
-    font-size:large;
-    left: 20%;
-    padding: 5px 15px;
-    position: absolute;
-    text-align: center;
-    z-index: 98;
-    width: 180px;   
-}
-
-*/
-
-/*this adds an arrow to the tooltip box */
-
-/*
-.highlight:hover:before{
-    border: solid;
-    border-color: #333 transparent;
-    border-width: 6px 6px 0 6px;
-    bottom: 20px;
-    content: "";
-    left: 50%;
-    position: absolute;
-    z-index: 99;
-}
-
-*/
