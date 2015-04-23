@@ -17,10 +17,13 @@ An aid to learning Erben's poem Zlatý Kolovrat using ToolTips in JavaScript
     <body>
         <h1>Zlatý kolovrat</h1>
         <h2>Karel Jaromír Erben</h2>
-        <div class="column">
+        <p>
+		I
+		</p>
+		
+		<div class="container">
 		<p>
-            I<br><br>
-            Okolo lesa pole <a class="tooltip" tooltip="large tract of land">lán</a>, <br>
+			Okolo lesa pole <a class="tooltip" tooltip="large tract of land">lán</a>, <br>
             <a class="tooltip" tooltip="hey look!">hoj</a> jede, jede z lesa pán, <br>	 
             na <a class="tooltip" tooltip="raven-black">vraném</a> <a class="tooltip" tooltip="fiesty">bujném</a> jede koni,<br>
             vesele <a class="tooltip" tooltip="horseshoes (dim. pl. of podkova)">podkovičky</a> zvoní,<br>
@@ -44,7 +47,9 @@ An aid to learning Erben's poem Zlatý Kolovrat using ToolTips in JavaScript
         </p>
 
         <p>
-            Pán stojí, <a class="tooltip highlight" tooltip="not knowing (participle)">nevěda</a>, co chtěl,<br>
+            <br> <!-- this br is here to line up the columns; for some reason right column is 1 line too high without this br. -->
+			<!-- however, this is not working either as not the columns are offset by a partial line. -->
+			Pán stojí, <a class="tooltip highlight" tooltip="not knowing (participle)">nevěda</a>, co chtěl,<br>
             své velké <a class="tooltip highlight" tooltip="žízeň (fem)?">žízně</a> zapomněl;<br>
             diví se tenké, rovné <a class="tooltip highlight" tooltip="acc pl?">niti</a>,<br>
             nemůže očí odvrátiti<br>
@@ -66,9 +71,12 @@ An aid to learning Erben's poem Zlatý Kolovrat using ToolTips in JavaScript
             <a class="tooltip" tooltip="tomorrow (coll. form of zítra)">zejtra</a> se s dcerou domů vrátí,<br>
             vyšly do města.“<br>
         </p>
-       </div>		
+       </div>
+		
 		<p>
-			II<br><br>		
+		II
+		</p>	   
+		<p>	
 			Okolo lesa pole lán,<br>										
 			hoj jede, jede zase pán;<br>			
 			na vraném bujném jede koni,<br>		
