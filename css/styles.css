@@ -73,10 +73,13 @@ a.highlight:hover:after{
 color:yellow;
 }
 
-/* column layout */	
-div.container{
-	-webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-}	
+/* puts text into 2 columns and aligns them */
+.container{
+   float:left;
+   width:100%;
+}
 
+.col{
+   float:left;
+   width:33%; /*or 33.3% if you want to be more precise*/
+}
