@@ -72,7 +72,8 @@ p {
 a.highlight:hover:after{
 color:yellow;
 }
-	
+
+/* column layout */	
 div.container{
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
