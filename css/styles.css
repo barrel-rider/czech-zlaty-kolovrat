@@ -29,6 +29,10 @@ p {
     margin-left: 50px;
 }
 
+hr {
+	margin-left: 50px;
+}
+
 .tooltip {
     color: steelblue;
     display: inline;
