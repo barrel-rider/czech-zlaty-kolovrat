@@ -34,13 +34,15 @@ hr {
 	width: 50%
 }
 
+/*this declaration refers to the text itself, not the text of the popup tooltip*/
 .tooltip {
     color: steelblue;
     display: inline;
     position: relative;
 }
 
-.tooltip:hover:after{
+/*this declaration displays the content after the text marked tooltip upon hovering*/ 
+.tooltip:hover::after{
     background: #333;
     background: rgba(0,0,0,.8);
     border-radius: 5px;
@@ -57,7 +59,7 @@ hr {
 }
 
 /*this adds an arrow to the tooltip box */
-.tooltip:hover:before{
+.tooltip:hover::before{
     border: solid;
     border-color: #333 transparent;
     border-width: 6px 6px 0 6px;
@@ -74,7 +76,7 @@ hr {
 	This allows highlighting to be turned on and off by adding or deleting the class "highlight" in the HTML file
 */
 
-a.highlight:hover:after{
+a.highlight:hover::after{
 color:yellow;
 }
 
