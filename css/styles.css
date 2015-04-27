@@ -41,7 +41,11 @@ hr {
     position: relative;
 }
 
-/*this declaration displays the content after the text marked tooltip upon hovering*/ 
+/*this declaration displays the content (here called "tooltip"
+in a position after the text marked tooltip upon hovering
+and in a higher stack order (z-index) than the text*/ 
+
+/*to get multiline tooltips and <pre> tags to work, I added fixed width and white-space:normal */
 .tooltip:hover::after{
     background: #333;
     background: rgba(0,0,0,.8);
@@ -51,11 +55,12 @@ hr {
     content: attr(tooltip);
     font-size:large;
     left: 20%;
-    padding: 5px 15px;
+	padding: 5px 15px;
     position: absolute;
     text-align: center;
-    z-index: 98;
-    width: 180px;   
+    white-space: normal;
+	width: 180px;
+	z-index: 98; 
 }
 
 /*this adds an arrow to the tooltip box */
